@@ -1,49 +1,26 @@
-# ADR-NNNN: [Kurzer Titel, der die Entscheidung beschreibt]
+Teamname: ConFlare
+Markenkonzept: clean und professionell bla bla 
 
-## Status
+Farben:
+    /* Primary */
+    --primary: #253c6d;
+    --primary-dark: #1a2b50;
 
-[Proposed | Accepted | Deprecated | Superseded by ADR-XXXX]
+    /* Secondary */
+    --secondary: #3d6fd1;
+    --secondary-light: #e8edf6;
 
-## Datum
+    /* Accent */
+    --accent: #f2842f;
+    --accent-dark: #b85a12;
 
-[YYYY-MM-DD]
+    /* Neutral */
+    --neutral-900: #1f2937;
+    --neutral-600: #505d79;
+    --neutral-200: #d5dbe6;
+    --neutral-50: #f7f8fb;
+    --neutral-0: #ffffff;
 
-## Kontext
-
-[Beschreiben Sie die Situation. Welches Problem lösen wir? Welche
-Einschränkungen gibt es? Welche Kräfte wirken? Seien Sie konkret --
-nennen Sie Zahlen, Deadlines, Team-Kompetenzen und technische
-Anforderungen, wo relevant.]
-
-## Entscheidung
-
-[Formulieren Sie die Entscheidung klar und prägnant. Verwenden Sie
-die aktive Form: "Wir werden X verwenden" statt
-"X sollte in Betracht gezogen werden."]
-
-## Betrachtete Alternativen
-
-### [Alternative 1]
-- Vorteile: ...
-- Nachteile: ...
-- Warum abgelehnt: ...
-
-### [Alternative 2]
-- Vorteile: ...
-- Nachteile: ...
-- Warum abgelehnt: ...
-
-## Konsequenzen
-
-### Positiv
-- [Was wird einfacher oder besser]
-
-### Negativ
-- [Was wird schwieriger oder schlechter]
-
-### Risiken
-- [Was könnte schiefgehen]
-
-## Verwandte Entscheidungen
-
-- [Links zu verwandten ADRs]
+    /* Status */
+    --success: #2e7d4f;
+    --error: #c0392b;

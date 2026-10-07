@@ -1,13 +1,12 @@
-# ADR-NNNN: [Kurzer Titel, der die Entscheidung beschreibt]
+# ADR-0002: [Kurzer Titel, der die Entscheidung beschreibt]
 
 ## Status
 
-[Proposed | Accepted | Deprecated | Superseded by ADR-XXXX]
+Accepted
 
 ## Datum
 
-[YYYY-MM-DD]
-
+[2026-10-07]
 ## Kontext
 
 [Beschreiben Sie die Situation. Welches Problem lösen wir? Welche
