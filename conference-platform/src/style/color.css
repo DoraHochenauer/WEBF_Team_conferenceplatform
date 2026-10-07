@@ -1,0 +1,27 @@
+:root {
+
+    /* Primary */
+    --primary: #253c6d;
+    --primary-dark: #1a2b50;
+
+    /* Secondary */
+    --secondary: #3d6fd1;
+    --secondary-light: #e8edf6;
+
+    /* Accent */
+    --accent: #f2842f;
+    --accent-dark: #b85a12;
+
+    /* Neutral */
+    --neutral-900: #1f2937;
+    --neutral-600: #505d79;
+    --neutral-200: #d5dbe6;
+    --neutral-50: #f7f8fb;
+    --neutral-0: #ffffff;
+
+    /* Status */
+    --success: #2e7d4f;
+    --error: #c0392b;
+
+
+}
