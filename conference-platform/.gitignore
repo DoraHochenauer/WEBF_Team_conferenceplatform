@@ -24,6 +24,11 @@ coverage
 *.sln
 *.sw?
 
+# Umgebungsvariablen (können Secrets enthalten)
+.env
+.env.*
+!.env.example
+
 *.tsbuildinfo
 
 .eslintcache

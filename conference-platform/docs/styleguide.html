@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ConFlare Styleguide</title>
+
+  <!-- Echte Tokens aus dem Projekt: Änderungen in tokens.css sind hier sofort sichtbar -->
+  <link rel="stylesheet" href="../src/style/tokens.css" />
+
+  <style>
+    /*
+     * Diese Seite verwendet für Farben und Abstände nur semantische und Komponenten-Tokens.
+     * Radius und Schrift sind hart codiert, weil es dafür noch keine Tokens gibt.
+     */
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--color-background);
+      color: var(--color-text);
+    }
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: var(--space-medium);
+    }
+
+    h1 { margin: 0 0 var(--space-medium); font-size: 1.1rem; }
+
+    h2 {
+      margin: 0 0 var(--space-small);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+    }
+
+    code { font: 0.7rem ui-monospace, Consolas, monospace; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-medium);
+    }
+
+    .block {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: var(--space-small) var(--space-medium) var(--space-medium);
+    }
+
+    .wide { grid-column: 1 / -1; }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-small);
+      align-items: center;
+    }
+
+    /* ---------- Navigation ---------- */
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: var(--space-small);
+      padding: var(--space-small) var(--space-medium);
+      background: var(--color-brand-primary);
+      color: var(--color-text-on-brand);
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .nav-logo { font-weight: 700; margin-right: auto; }
+
+    .nav a {
+      color: var(--color-text-on-brand);
+      text-decoration: none;
+      padding: 2px var(--space-small);
+      border-radius: 4px;
+    }
+
+    .nav a[aria-current="page"] { background: var(--color-brand-primary-hover); }
+
+    /* ---------- Buttons ---------- */
+    .button {
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .button-primary { background: var(--button-background); color: var(--button-text); }
+    .button-primary:hover { background: var(--button-background-hover); }
+
+    .button-secondary {
+      background: var(--color-surface);
+      color: var(--color-brand-primary);
+      border-color: var(--color-brand-primary);
+    }
+
+    .button-secondary:hover { background: var(--color-surface-highlight); }
+
+    .button-accent { background: var(--color-brand-accent); color: var(--color-text); }
+    .button-accent:hover { background: var(--color-brand-accent-hover); color: var(--color-text-on-brand); }
+
+    .button:focus-visible {
+      outline: 3px solid var(--color-brand-secondary);
+      outline-offset: 2px;
+    }
+
+    /* ---------- Badges ---------- */
+    .badge {
+      display: inline-block;
+      padding: 1px var(--space-small);
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .badge-track { background: var(--color-surface-highlight); color: var(--color-brand-primary); }
+
+    .badge-level {
+      background: var(--color-surface);
+      color: var(--color-text-muted);
+      border: 1px solid var(--color-border);
+    }
+
+    /* ---------- Meldungen ---------- */
+    .alert {
+      flex: 1 1 100%;
+      padding: 4px var(--space-small);
+      border: 1px solid var(--color-border);
+      border-left-width: 4px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .alert-success { border-left-color: var(--color-success); }
+    .alert-success strong { color: var(--color-success); }
+    .alert-error { border-left-color: var(--color-error); }
+    .alert-error strong { color: var(--color-error); }
+
+    /* ---------- Session-Card ---------- */
+    .card {
+      flex: 1 1 220px;
+      background: var(--card-background);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: var(--space-small) 12px;
+    }
+
+    .card-saved {
+      background: var(--color-surface-highlight);
+      border-color: var(--color-brand-secondary);
+    }
+
+    .card-meta { font-size: 0.75rem; color: var(--color-text-muted); }
+    .card-title { margin: 2px 0; font-size: 0.9rem; }
+    .card-speaker { margin: 0 0 4px; font-size: 0.8rem; color: var(--color-text-muted); }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-small);
+      margin-top: var(--space-small);
+    }
+
+    /* ---------- Tokens ---------- */
+    .token-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 4px var(--space-medium);
+    }
+
+    .token {
+      display: flex;
+      align-items: center;
+      gap: var(--space-small);
+      min-width: 0;
+    }
+
+    .token-color {
+      flex: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+    }
+
+    .token span { color: var(--color-text-muted); }
+
+    .primitives { display: flex; flex-wrap: wrap; gap: 4px; }
+    .primitives .token-color { width: 28px; height: 28px; }
+
+    .space-bar {
+      height: 10px;
+      background: var(--color-brand-secondary);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ConFlare Styleguide</h1>
+
+    <div class="grid">
+      <section class="block wide">
+        <h2>Navigation</h2>
+        <nav class="nav" aria-label="Beispielnavigation">
+          <span class="nav-logo">ConFlare</span>
+          <a href="#" aria-current="page">Programm</a>
+          <a href="#">Speaker</a>
+          <a href="#">Mein Programm</a>
+        </nav>
+      </section>
+
+      <section class="block">
+        <h2>Buttons</h2>
+        <div class="row">
+          <button class="button button-primary">Merken</button>
+          <button class="button button-secondary">Details</button>
+          <button class="button button-accent">Anmelden</button>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Badges &amp; Meldungen</h2>
+        <div class="row">
+          <span class="badge badge-track">Design Systems &amp; UX</span>
+          <span class="badge badge-level">Einsteiger</span>
+          <div class="alert alert-success" role="status"><strong>Gespeichert.</strong> In „Mein Programm".</div>
+          <div class="alert alert-error" role="alert"><strong>Fehler.</strong> Daten nicht geladen.</div>
+        </div>
+      </section>
+
+      <section class="block wide">
+        <h2>Session-Card · normal / gemerkt</h2>
+        <div class="row">
+          <article class="card">
+            <div class="card-meta">15.09. · 10:15–11:00 · Saal A</div>
+            <h3 class="card-title">Headless Components in der Praxis</h3>
+            <p class="card-speaker">Jonas Ahrend · Pixelwerk</p>
+            <div class="card-footer">
+              <span class="badge badge-track">Frontend Architecture</span>
+              <button class="button button-primary">Merken</button>
+            </div>
+          </article>
+
+          <article class="card card-saved">
+            <div class="card-meta">15.09. · 10:15–11:00 · Saal B</div>
+            <h3 class="card-title">Design Tokens: Eine Sprache für Design und Code</h3>
+            <p class="card-speaker">Elena Voss · Studio Hallo</p>
+            <div class="card-footer">
+              <span class="badge badge-track">Design Systems &amp; UX</span>
+              <button class="button button-secondary">Entfernen</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block wide">
+        <h2>Farben · Semantisch → Primitive</h2>
+        <div class="token-list" id="semantic"></div>
+      </section>
+
+      <section class="block">
+        <h2>Primitive</h2>
+        <div class="primitives" id="primitives"></div>
+      </section>
+
+      <section class="block">
+        <h2>Abstände</h2>
+        <div class="token-list" id="spaces"></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const primitives = [
+      '--color-blue-900', '--color-blue-800', '--color-blue-500', '--color-blue-50',
+      '--color-orange-700', '--color-orange-500',
+      '--color-gray-900', '--color-gray-600', '--color-gray-200', '--color-gray-50', '--color-white',
+      '--color-green-700', '--color-red-700',
+    ];
+
+    const semantic = [
+      '--color-brand-primary', '--color-brand-primary-hover', '--color-brand-secondary',
+      '--color-brand-accent', '--color-brand-accent-hover',
+      '--color-background', '--color-surface', '--color-surface-highlight', '--color-border',
+      '--color-text', '--color-text-muted', '--color-text-on-brand',
+      '--color-success', '--color-error',
+    ];
+
+    const spaces = ['--space-small', '--space-medium', '--space-large'];
+
+    const styles = getComputedStyle(document.documentElement);
+    const valueOf = (name) => styles.getPropertyValue(name).trim();
+
+    // Zu jedem Hex-Wert den Namen des Primitives merken, um Aliase anzuzeigen
+    const primitiveByValue = new Map(primitives.map((name) => [valueOf(name).toLowerCase(), name]));
+
+    const short = (name) => name.replace('--color-', '');
+
+    for (const name of semantic) {
+      const alias = primitiveByValue.get(valueOf(name).toLowerCase());
+      document.getElementById('semantic').insertAdjacentHTML('beforeend', `
+        <div class="token">
+          <div class="token-color" style="background: var(${name})"></div>
+          <code>${short(name)} <span>→ ${alias ? short(alias) : valueOf(name) || 'nicht definiert'}</span></code>
+        </div>`);
+    }
+
+    // Primitive nur als Farbfelder, Name und Wert erscheinen beim Darüberfahren
+    for (const name of primitives) {
+      document.getElementById('primitives').insertAdjacentHTML('beforeend', `
+        <div class="token-color" style="background: var(${name})" title="${name}: ${valueOf(name)}"></div>`);
+    }
+
+    for (const name of spaces) {
+      document.getElementById('spaces').insertAdjacentHTML('beforeend', `
+        <div class="token">
+          <div class="space-bar" style="width: var(${name})"></div>
+          <code>${name.replace('--space-', '')} <span>${valueOf(name)}</span></code>
+        </div>`);
+    }
+  </script>
+</body>
+</html>

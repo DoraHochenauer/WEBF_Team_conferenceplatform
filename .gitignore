@@ -1,0 +1,16 @@
+# Gilt für das ganze Repository.
+# Projektspezifische Regeln stehen in conference-platform/.gitignore.
+
+# Claude Code (lokale Konfiguration, z. B. Vorschau-Server)
+/conference-platform/.claude
+
+# Abhängigkeiten, egal in welchem Ordner npm install ausgeführt wurde
+node_modules/
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
