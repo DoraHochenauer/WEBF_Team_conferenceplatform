@@ -19,7 +19,7 @@ Wir wollen bei den bereits bekannten Setup Vue + Vite  + vue-router aus den vorh
 
 ## Betrachtete Alternativen
 
-### Nuxt und Vite
+### Nuxt und vue
 - Vorteile: einfachere Rendering Umsetzung
 - Nachteile: keine Erfahrung im Team  
 - Warum abgelehnt: Wir wollen bei bekannten Tools bleiben, zu hoher Zeitaufwand neue Technologien zu erlernen
