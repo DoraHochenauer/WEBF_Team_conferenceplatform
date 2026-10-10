@@ -1,4 +1,4 @@
-import './style/tokens.css'
+import '../tokens/tokens.css'
 import './style/layouPrototype.css'
 import './assets/main.css'
 

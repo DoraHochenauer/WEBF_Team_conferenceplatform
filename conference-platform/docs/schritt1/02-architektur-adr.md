@@ -33,6 +33,7 @@ Wir sind zu zweit. Wir brauchen deshalb eine Struktur, in der klar ist, wo eine 
 Wir verwenden eine Ordnerstruktur nach Schichten:
 
 ```
+tokens/                Design Tokens (tokens.css)
 src/
 ├── assets/            
 ├── components/
@@ -43,7 +44,7 @@ src/
 ├── data/              conference-data.json
 ├── layout/            Seitenrahmen (Header, Navigation, Footer)
 ├── router/            Routen-Konfiguration (vue-router)
-├── style/             Design Tokens (tokens.css)
+├── style/             globale Stile
 └── views/             eine Komponente pro Route
 ```
 

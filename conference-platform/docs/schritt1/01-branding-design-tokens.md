@@ -9,7 +9,7 @@ Das passt zum Setting der Konferenz bei der es unzuverlässiges WLan gibt, und s
 
 ### Palette
 Farbpalette welche das Markenkozept unterstreicht:
-(komplettes Tokens-Set in conference-platform\src\style\tokens.css)
+(komplettes Tokens-Set in conference-platform\tokens\tokens.css)
 
 Primäre Farben, Haupfarbe des Logos und dient als ruhige seriöse Grundfarbe
     --primary: #253c6d;
@@ -52,7 +52,7 @@ Vereinfacht Kommunikation zwischen Design und Entwicklung.
 Namen entsprechen Token-Pfaden im DTCG-Format 2025.10 und und können somit leicht nach zB. figma exportiert werden.
 
 ### WCAG-AA-Kontrastprüfung 
-Farben aus conference-platform\src\style\tokens.css
+Farben aus conference-platform\tokens\tokens.css
 #### Allgemein:
 --color-text (#1F2937) auf --color-background (#F7F8FB)
 Contrast Ratio: 13.82:1
