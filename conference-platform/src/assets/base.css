@@ -1,4 +1,4 @@
-/* Grundstil – Farben und Abstände kommen aus src/style/tokens.css */
+/* Grundstil – Farben, Abstände und Typografie kommen aus src/style/tokens.css */
 
 *,
 *::before,
@@ -11,17 +11,19 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
+  line-height: var(--line-height-normal);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin: 0 0 var(--space-medium);
+  font-size: var(--font-size-heading-1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-brand-primary);
 }

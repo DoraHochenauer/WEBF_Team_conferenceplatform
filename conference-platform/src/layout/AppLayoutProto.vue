@@ -12,7 +12,7 @@ const navItems = [
   <div class="layout">
     <header class="header">
       <div class="container header-inner">
-        <a href="#" class="logo">Con<span class="logo-flare">Flare</span></a>
+        <a href="#" class="logo">ConFlare Lo<span class="logo-flare">go</span></a>
         <nav aria-label="Hauptnavigation">
           <ul class="nav-list">
             <li v-for="item in navItems" :key="item.label">
@@ -71,12 +71,10 @@ const navItems = [
 
 .logo {
   color: var(--color-text-on-brand);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: var(--font-size-heading-2);
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
 }
-
-/* Der „Flare" im Namen: Orange auf Navy, als großer fetter Text kontrastreich genug */
 .logo-flare {
   color: var(--color-brand-accent);
 }
@@ -92,7 +90,7 @@ const navItems = [
 
 .nav-link {
   display: block;
-  padding: 4px var(--space-small);
+  padding: var(--space-xsmall) var(--space-small);
   border-bottom: 2px solid transparent;
   border-radius: 4px 4px 0 0;
   color: var(--color-text-on-brand);
@@ -118,6 +116,6 @@ const navItems = [
   padding: var(--space-medium) 0;
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
-  font-size: 0.85rem;
+  font-size: var(--font-size-small);
 }
 </style>

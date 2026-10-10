@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppLayout from './layout/AppLayout.vue'
+import AppLayout from './layout/AppLayoutProto.vue'
 </script>
 
 <template>
@@ -62,80 +62,3 @@ import AppLayout from './layout/AppLayout.vue'
     </div>
   </AppLayout>
 </template>
-
-<style scoped>
-.filter {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-small) var(--space-medium);
-  align-items: end;
-  margin-top: var(--space-medium);
-  padding: var(--space-medium);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-}
-
-select,
-.reset {
-  font: inherit;
-  font-size: 0.9rem;
-  padding: 6px var(--space-small);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  background: var(--color-surface);
-  color: var(--color-text);
-}
-
-.reset {
-  border-color: var(--color-brand-primary);
-  color: var(--color-brand-primary);
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--space-medium);
-  margin-top: var(--space-medium);
-}
-
-.box {
-  padding: var(--card-padding);
-  background: var(--card-background);
-  border: 1px solid var(--card-border);
-  border-left: 4px solid var(--color-brand-secondary);
-  border-radius: 8px;
-}
-
-.box-highlight {
-  border-left-color: var(--color-brand-accent);
-}
-
-.time {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--color-brand-primary);
-}
-
-h2 {
-  margin: 4px 0;
-  font-size: 1rem;
-}
-
-p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-}
-</style>

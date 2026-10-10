@@ -1,0 +1,87 @@
+.filter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-small) var(--space-medium);
+    align-items: end;
+    margin-top: var(--space-medium);
+    padding: var(--space-medium);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xsmall);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+}
+
+select {
+    font: inherit;
+    font-size: var(--font-size-small);
+    padding: var(--space-xsmall) var(--space-small);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+
+.reset {
+    font: inherit;
+    font-size: var(--font-size-small);
+    padding: var(--space-xsmall) var(--space-small);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--button-background);
+    color: var(--button-text);
+    border-color: var(--color-brand-primary);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+}
+
+
+.reset:hover {
+    background: var(--button-background-hover);
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-medium);
+    margin-top: var(--space-medium);
+}
+
+.box {
+    padding: var(--card-padding);
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--color-brand-secondary);
+    border-radius: 8px;
+}
+
+.box-highlight {
+    border-left-color: var(--color-brand-accent);
+}
+
+.time {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brand-primary);
+}
+
+h2 {
+    margin: var(--space-xsmall) 0;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-tight);
+}
+
+p {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+}

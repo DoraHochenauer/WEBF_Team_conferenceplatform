@@ -1,17 +1,15 @@
-/*
- * Design Tokens – ConFlare
- *
- * Aufbau in drei Ebenen: Primitive → Semantisch → Komponente.
- * Komponenten verwenden nur semantische oder Komponenten-Tokens, nie Primitive.
- *
- * Die Namen entsprechen den Token-Pfaden im DTCG-Format 2025.10
- * (https://www.designtokens.org/tr/2025.10/):
-
-
+/*Design Tokens – ConFlare
+ 
+Aufbau in drei Ebenen: Primitive → Semantisch → Komponente.
+Komponenten verwenden nur semantische oder Komponenten-Tokens, nie Primitive.
+(va Farben, Text/Spacing Ausnahme)
+*/
 
 /* Primitives */
+/* enthält noch keine Palette für dark mode*/
 :root {
 
+     /***FARBE***/
     /* Blau */
     --color-blue-900: #1a2b50;
     --color-blue-800: #253c6d;
@@ -33,14 +31,38 @@
     --color-green-700: #2e7d4f;
     --color-red-700: #c0392b;
 
-    /* Abstände */
+
+    /***TEXT/SPACE***/
+
+    /* Spacing-Skala (wird direkt verwendet) */
+    --space-xsmall: 4px;
     --space-small: 8px;
     --space-medium: 16px;
     --space-large: 32px;
+
+    /* Typografie-Skala */
+    --font-family-sans: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+    --font-size-100: 0.75rem;
+    /* 12px */
+    --font-size-200: 0.875rem;
+    /* 14px */
+    --font-size-300: 1rem;
+    /* 16px */
+    --font-size-400: 1.25rem;
+    /* 20px */
+    --font-size-500: 1.75rem;
+    /* 28px */
+
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.6;
 }
 
-
-/* Semantik */
+/* Semantik light */
 :root {
     color-scheme: light;
 
@@ -65,12 +87,33 @@
     /* Status */
     --color-success: var(--color-green-700);
     --color-error: var(--color-red-700);
+
+    /***TEXT***/
+
+    /* Typografie */
+    --font-family-base: var(--font-family-sans);
+    --font-size-body: var(--font-size-300);
+    --font-size-small: var(--font-size-200);
+    --font-size-label: var(--font-size-100);
+    --font-size-heading-1: var(--font-size-500);
+    --font-size-heading-2: var(--font-size-400);
 }
 
+/* Semantik dark */
 
 :root[data-theme="dark"] {
     color-scheme: dark;
-/* TO DO*/
+    /* TO DO*/
+    /* genau wie oben, aber mit dunklen Farben*/
+
+    /*keine Komponenten hinterlegen!*/
+
+    /*   Marke
+    --color-brand-primary: var(--???);
+    --color-brand-primary-hover: var(--???);
+
+     Flächen
+    --color-background: var(--???);*/
 }
 
 
@@ -84,6 +127,7 @@
 
     /* Card */
     --card-background: var(--color-surface);
+    --card-text: var(--color-text);
     --card-border: var(--color-border);
     --card-padding: var(--space-medium);
 }
