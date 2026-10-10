@@ -10,18 +10,18 @@ Accepted
 
 ## Kontext
 
-Die App arbeitet mit zwei verschiedenen Daten, den Konferenzdaten, (Sessions) diese sind für alle gelich und werden nur gelesen, und den Daten von "mein Programm", hier handelt es sich um die Sessions, die sich ein Nutzer merkt. Diese öndern sich und müssen nach einen Reload auch noch vorhanden sein. 
+Die App arbeitet mit zwei verschiedenen Daten, den Konferenzdaten (Sessions), diese sind für alle gleich und werden nur gelesen, und den Daten von "mein Programm", hier handelt es sich um die Sessions, die sich ein Nutzer merkt. Diese ändern sich und müssen nach einen Reload auch noch vorhanden sein. 
 
-Die Daten werden von mehreren Seiten geleichzeitig gebraucht. Wenn also eine Sesson beispielsweise hinzugefügt wird, dann muss das für überall sichtbar sein. 
+Die Daten werden von mehreren Seiten gleichzeitig gebraucht. Wenn also eine Session beispielsweise hinzugefügt wird, dann muss das für überall sichtbar sein. 
 
-In der Hausüberung 2 haben wir schon verschiedenste Technologien (z.B. Composables) kennen gelernt, die hier eigesetzt werden könnnen. 
+In der Hausüberung 2 haben wir schon verschiedenste Technologien (z.B. Composables) kennen gelernt, die hier eigesetzt werden können. 
 
 
 
 ## Entscheidung
 
 es gibt drei Composabeles: 
-- useConferenceData: lädt die Json-datei einmal und gibt die Sessions zurücj
+- useConferenceData: lädt die Json-datei einmal und gibt die Sessions zurück
 - useMyProgram: speichert die Liste von den Session-IDs
 - useLocalStorage: speichert die IDs im local Storage und lädt diese beim Start 
 
@@ -45,7 +45,7 @@ flowchart LR
 - auf die Datei conference-data.json wird nur von uscConferenceData zugegriffen. Es lädt die Datei einmal und stellt die Sessionsinformationen bereit.
 - useLocalStorage ist die einzige Stelle, die auf den localStorage zugreift. 
 - useMyProgram merkt sich die IDs der gewählten Sessions und verbindet sie mit den vollständigen Sessioninformationen aus conference-data.json
-- wird neugeladen ließt useMyProgram über useLocalStorage die gespeicherten IDs ein. Bei jeder Änderung schreibt es auch ie neuen Änderungen in die ID-Liste zurück. 
+- wird neugeladen ließt useMyProgram über useLocalStorage die gespeicherten IDs ein. Bei jeder Änderung schreibt es auch die neuen Änderungen in die ID-Liste zurück. 
 - in den Komponeten werden nur Funktionen(add oder remove) aufgerufen. Sie ändern die Daten allerdings nie direkt. 
 - Komponeten wie beispielsweise die Übersichtsseite kann infomationen auch direkt von useConferenceData holen
 
@@ -56,10 +56,10 @@ flowchart LR
 ### Pinia
 - Vorteile: klare Struktur, gute Tools
 - Nachteile: unbekannte/neue Libary - muss erst gelernt werden
-- Warum abgelehnt: für die größe der App sollten composables ausreichen und die Funktionsweise ist von diesen aus Hausübung 2 bekannt
+- Warum abgelehnt: für die Größe der App sollten composables ausreichen und die Funktionsweise ist von diesen aus Hausübung 2 bekannt
 
 ###  ganze Session Objekte
-- Vorteile: das Dashboard würde die JSON-datei ich brauchen 
+- Vorteile: das Dashboard würde die JSON-datei nicht brauchen 
 - Nachteile: man arbeitet quasi mit doppelten Daten. - es gibt bei Änderungen immer noch veraltete Kopien 
 - Warum abgelehnt: die IDs ändern sich nie, daher halten sie das ganze aktuell, daher wird mit diesen gearbeitet
 
