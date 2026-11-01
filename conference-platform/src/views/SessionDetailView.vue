@@ -40,6 +40,9 @@ const sessions = computed(() => {
       <BaseBadge>{{ session.format }}</BaseBadge>
     </div>
 
+
+
+    
     <div class="save">
   <SaveSessionButton :session-id="session.id" />
 </div>
