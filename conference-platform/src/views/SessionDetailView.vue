@@ -15,7 +15,7 @@ const { getSession, getRoomName, getTrackName, getSpeakersOfSession } = useConfe
 
 const session = computed(() => getSession(props.id))
 
-const sessions = computed(() => {
+const speakers = computed(() => {
    if (!session.value) return [] // das ! sagt, wenn es keine Sesson gibt dann gib eine leere Liste zurück 
   return getSpeakersOfSession(session.value) 
 })
@@ -42,7 +42,7 @@ const sessions = computed(() => {
 
 
 
-    
+
     <div class="save">
   <SaveSessionButton :session-id="session.id" />
 </div>
