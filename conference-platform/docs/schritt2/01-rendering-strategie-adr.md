@@ -22,7 +22,7 @@ Session-Übersicht mit Filtern -> ja
 Seite muss aber nicht beim Hinzufügen neu geniert werden, 
 erst beim Aufruf des „Mein Programm" Dashboards. Dabei wird der veränderte localStorage ausgelesen.
 
-Aufgrund unseres Setups Vue + Vite (ADR-0004) handelst es sich um eine reine CSR-App. SSG, SSR und ISR diskutieren wir wo es sinnvoll wäre.
+Aufgrund unseres Setups Vue + Vite (ADR-0004) handelt es sich um eine reine CSR-App. SSG, SSR und ISR diskutieren wir wo es sinnvoll wäre.
 
 ## Betrachtete Optionen
 
@@ -53,8 +53,8 @@ Daten werden aus statischen json geladen.
   kurzzeitig veraltete Daten möglich
 
 ### Entscheidung
- Wir entscheiden uns für CSR da es für uns den geringsten zusätzlichen Aufwand,
- und wollen uns an die bereitsgelernten Strukturen halten. Theoretisch wäre SSG sinnvoller, weil die Daten für alle Besucher gleich sind und sich praktisch nie ändern.
+ Wir entscheiden uns für CSR da es für uns den geringsten zusätzlichen Aufwand bedeutet 
+ und wir wollen uns an die bereits gelernten Strukturen halten. Theoretisch wäre SSG sinnvoller, weil die Daten für alle Besucher gleich sind und sich praktisch nie ändern.
 
 ### Konsequenzen
 - Positiv: Kein zusätzliches Tool nötig, einheitlich mit dem Rest der App
@@ -92,8 +92,8 @@ Daten werden aus statischen json geladen.
   kurzzeitig veraltete Daten möglich
 
 ### Entscheidung
- Wir entscheiden uns für CSR da es für uns den geringsten zusätzlichen Aufwand,
- und wollen uns an die bereitsgelernten Strukturen halten. Theoretisch wäre SSG sinnvoller, weil die Daten für alle Besucher gleich sind und sich praktisch nie ändern.
+ Wir entscheiden uns für CSR da es für uns den geringsten zusätzlichen Aufwand bedeutet
+ und wir wollen uns an die bereitsgelernten Strukturen halten. Theoretisch wäre SSG sinnvoller, weil die Daten für alle Besucher gleich sind und sich praktisch nie ändern.
 
 ### Konsequenzen
 - Positiv: Kein zusätzliches Tool nötig, einheitlich mit dem Rest der App
