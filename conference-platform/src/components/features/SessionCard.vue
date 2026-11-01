@@ -22,7 +22,7 @@ const speakers = computed(() => getSpeakersOfSession(props.session))
       <template v-if="showDay">{{ formatDay(session.day) }}, </template>
       {{ session.startTime }}–{{ session.endTime }}
     </span>
-    <h2>{{ session.title }}</h2>
+    <h2><RouterLink :to="{ name: 'session', params: { id: session.id } }">{{ session.title }}</RouterLink></h2>
     <p>
       {{ getRoomName(session.roomId) }} ·
       <!-- jeder Speaker-Name verlinkt auf sein Profil -->
