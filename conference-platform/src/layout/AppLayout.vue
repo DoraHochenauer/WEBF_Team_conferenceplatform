@@ -1,10 +1,9 @@
 <script setup lang="ts">
-
-//führt nirgends hin
+// Speaker und Mein Programm folgen in späteren Schritten, bis dahin NotFoundView
 const navItems = [
-  { label: 'Programm', href: '#', active: true },
-  { label: 'Speaker', href: '#' },
-  { label: 'Mein Programm', href: '#' }
+  { label: 'Programm', to: '/' },
+  { label: 'Speaker', to: '/speakers' },
+  { label: 'Mein Programm', to: '/mein-programm' }
 ]
 </script>
 
@@ -12,17 +11,14 @@ const navItems = [
   <div class="layout">
     <header class="header">
       <div class="container header-inner">
-        <a href="#" class="logo">ConFlare Lo<span class="logo-flare">go</span></a>
+        <RouterLink to="/" class="logo">ConFlare Lo<span class="logo-flare">go</span></RouterLink>
         <nav aria-label="Hauptnavigation">
           <ul class="nav-list">
             <li v-for="item in navItems" :key="item.label">
-              <a
-                :href="item.href"
-                class="nav-link"
-                :aria-current="item.active ? 'page' : undefined"
-              >
+              <!-- RouterLink setzt aria-current="page" auf der aktiven Seite -->
+              <RouterLink :to="item.to" class="nav-link">
                 {{ item.label }}
-              </a>
+              </RouterLink>
             </li>
           </ul>
         </nav>
@@ -38,4 +34,3 @@ const navItems = [
     </footer>
   </div>
 </template>
-

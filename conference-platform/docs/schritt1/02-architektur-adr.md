@@ -40,11 +40,12 @@ src/
 │   ├── base/          Base/UI: wiederverwendbare Bausteine ohne App-Wissen
 │   ├── features/      Feature: fachliche Komponenten mit App-Wissen
 │   └── icons/         
-├── composable/        Logik und States (siehe ADR-0003)
+├── composables/       Logik und States (siehe ADR-0003)
 ├── data/              conference-data.json
 ├── layout/            Seitenrahmen (Header, Navigation, Footer)
 ├── router/            Routen-Konfiguration (vue-router)
 ├── style/             globale Stile
+├── types/             TypeScript-Interfaces für die Konferenzdaten
 └── views/             eine Komponente pro Route
 ```
 

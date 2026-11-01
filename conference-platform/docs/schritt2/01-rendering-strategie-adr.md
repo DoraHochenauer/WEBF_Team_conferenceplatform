@@ -109,8 +109,8 @@ Daten werden aus statischen json geladen.
 
 ### Kontext
 Die Übersicht zeigt alle Sessions aus dem json. Diese Daten
-sind für alle Besucher gleich und ändern sich nicht. Pro Nutzer ändert sich nur der Filterzustand (Track, Tag, Level, Format). Das ist reiner Zustand im Browser, die Daten selbst bleiben
-gleich. 
+sind für alle Besucher gleich und ändern sich nicht. Pro Nutzer ändert sich nur der Filterzustand (Track, Tag, Level). Das ist reiner Zustand im Browser, die Daten selbst bleiben
+gleich. Der Filter steht in der URL (z. B. `?track=ai-dx`), damit gefilterte Ansichten teilbar sind.
 
 ### Optionen
 #### Option A: SSG/ISR für die Liste + Filtern im Client (CSR)
@@ -129,13 +129,14 @@ gleich.
 
 
 ### Entscheidung
-Theoretisch ISR mit einem Intervall von ca. 60 s: Die Seiten sind schnell
-verfügbar, und Zeitplanänderungen sind spätestens nach einer Minute sichtbar.
-Wir setzen aber CSR um, weil wir bei Vue + Vite bleiben (ADR-0004).
+Theoretisch wäre Option A ideal: Die Liste als statisches HTML (SSG), gefiltert
+wird im Browser. Wir setzen aber reine CSR um (Option C), weil wir bei Vue + Vite
+bleiben (ADR-0004). Das Filtern läuft in beiden Fällen gleich: über `computed`
+im Browser, ohne Server-Anfrage.
 
 
 ### Konsequenzen
-- Positiv: Kein Server und kein Zusatz-Tool nötig. Wird die JSON ausgelesen sind Änderungen ohne neuen Build sichtbar.
+- Positiv: Kein Server und kein Zusatz-Tool nötig, Filtern reagiert sofort.
 - Negativ: Inhalt erst nach dem Laden von JavaScript sichtbar, schwächer
   für SEO
 
