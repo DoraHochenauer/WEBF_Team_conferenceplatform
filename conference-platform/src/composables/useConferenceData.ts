@@ -1,7 +1,7 @@
 import conferenceData from '../data/conference-data.json'
 import type { ConferenceData, Session, Speaker } from '../types/Conference'
 
-// Lädt die Konferenzdaten einmal. Die Daten werden nur gelesen, deshalb kein ref().
+
 const data = conferenceData as ConferenceData
 
 export function useConferenceData() {
