@@ -29,3 +29,11 @@ damit gefilterte Ansichten teilbar sind.
 Theoretisch wäre SSG für die Liste + Filtern im Client ideal (besseres SEO).
 Wir bleiben bei Vue + Vite (ADR-0004).
 
+## Rendering-Entscheidung (Speaker-Profile)
+
+Die Speaker-Übersicht (`/speakers`) und die Profilseiten (`/speakers/:id`)
+werden per CSR gerendert (ADR-0005, Abschnitt 1). Die Profilseite holt den
+Speaker und seine Sessions über `useConferenceData()` anhand der ID aus der URL.
+Unbekannte IDs zeigen die Not-Found-Seite. Theoretisch wäre SSG ideal, weil die
+Daten für alle gleich sind und sich nicht ändern.
+

@@ -4,12 +4,19 @@ import SessionCard from './SessionCard.vue'
 
 defineProps<{
   sessions: Session[]
+  // Tag auf jeder Karte anzeigen (wenn die Liste nicht nach Tag gruppiert ist)
+  showDay?: boolean
 }>()
 </script>
 
 <template>
   <div v-if="sessions.length > 0" class="grid">
-    <SessionCard v-for="session in sessions" :key="session.id" :session="session" />
+    <SessionCard
+      v-for="session in sessions"
+      :key="session.id"
+      :session="session"
+      :show-day="showDay"
+    />
   </div>
   <p v-else class="empty">
     <slot name="empty">Keine Sessions gefunden.</slot>

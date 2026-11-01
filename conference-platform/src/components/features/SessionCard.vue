@@ -2,25 +2,35 @@
 import { computed } from 'vue'
 import type { Session } from '../../types/Conference'
 import { useConferenceData } from '../../composables/useConferenceData'
+import { formatDay } from '../../utils/formatDay'
 import BaseCard from '../base/BaseCard.vue'
 import BaseBadge from '../base/BaseBadge.vue'
 
 const props = defineProps<{
   session: Session
+  showDay?: boolean
 }>()
 
 const { getTrackName, getRoomName, getSpeakersOfSession } = useConferenceData()
 
-const speakerNames = computed(() =>
-  getSpeakersOfSession(props.session).map((speaker) => speaker.name).join(', ')
-)
+const speakers = computed(() => getSpeakersOfSession(props.session))
 </script>
 
 <template>
   <BaseCard :highlight="session.trackId === 'keynote'">
-    <span class="time">{{ session.startTime }}–{{ session.endTime }}</span>
+    <span class="time">
+      <template v-if="showDay">{{ formatDay(session.day) }}, </template>
+      {{ session.startTime }}–{{ session.endTime }}
+    </span>
     <h2>{{ session.title }}</h2>
-    <p>{{ getRoomName(session.roomId) }} · {{ speakerNames }}</p>
+    <p>
+      {{ getRoomName(session.roomId) }} ·
+      <!-- jeder Speaker-Name verlinkt auf sein Profil -->
+      <template v-for="(speaker, index) in speakers" :key="speaker.id">
+        <RouterLink :to="{ name: 'speaker', params: { id: speaker.id } }">{{ speaker.name }}</RouterLink>
+        <template v-if="index < speakers.length - 1">, </template>
+      </template>
+    </p>
     <div class="badges">
       <BaseBadge>{{ getTrackName(session.trackId) }}</BaseBadge>
       <BaseBadge>{{ session.level }}</BaseBadge>

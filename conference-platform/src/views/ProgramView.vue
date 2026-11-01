@@ -5,20 +5,13 @@ import { useConferenceData } from '../composables/useConferenceData'
 import BaseSelect, { type SelectOption } from '../components/base/BaseSelect.vue'
 import BaseButton from '../components/base/BaseButton.vue'
 import SessionList from '../components/features/SessionList.vue'
+import { formatDay } from '../utils/formatDay'
 
 // CSR (ADR-0005)
 //Die Daten sind beim Build fix, gefiltert wird im Browser ohne Server-Anfrage.
 const { sessions, tracks } = useConferenceData()
 const route = useRoute()
 const router = useRouter()
-
-function formatDay(day: string) {
-  return new Date(`${day}T00:00:00`).toLocaleDateString('de-AT', {
-    weekday: 'short',
-    day: '2-digit',
-    month: '2-digit',
-  })
-}
 
 //holen der Optionen für Dropdown
 const trackOptions: SelectOption[] = tracks.map((track) => ({ value: track.id, label: track.name }))

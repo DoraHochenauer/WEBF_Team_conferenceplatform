@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Speaker und Mein Programm folgen in späteren Schritten, bis dahin NotFoundView
+// Mein Programm folgt in einem späteren Schritt, bis dahin NotFoundView
 const navItems = [
   { label: 'Programm', to: '/' },
   { label: 'Speaker', to: '/speakers' },
