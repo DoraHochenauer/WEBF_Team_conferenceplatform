@@ -113,6 +113,28 @@ Die gemerkten Sessions werden grundlegend schon clientseitig im localStroage ges
 
 
 ## Testszenarien 
+Build + `npm run dev`, offline über DevTools → Network → „Offline", Inkognito-Fenster.
+Person 2: [ Firefox ]
 
+### i. Übersicht offline
+- **Vorher:** App einmal online geöffnet
+- **Aktion:** Offline → `/` neu laden
+- **Ergebnis P1:** ✅ alle 20 Sessions, Filter funktionieren
+- **Ergebnis P2:** [ … ]
+- **Lücke:** Daten = Stand vom letzten Online-Laden, kein Offline-Hinweis
+
+### ii. Mein Programm offline
+- **Vorher:** Sessions online gemerkt
+- **Aktion:** Offline → `/mein-programm` neu laden
+- **Ergebnis P1:** ✅ gemerkte Sessions sichtbar, Entfernen funktioniert
+- **Ergebnis P2:** [ … ]
+- **Lücke:** Browserdaten gelöscht = Sessions weg
+
+### iii. Erstbesuch offline
+- **Vorher:** App nie geöffnet
+- **Aktion:** Offline → App aufrufen
+- **Ergebnis P1:** ⚠️ [Fehlerseite des Browsers]
+- **Ergebnis P2:** [ … ]
+- **Warum okay:** Service Worker muss einmal online installiert werden, Teilnehmende öffnen die App meist vorab
 
 
