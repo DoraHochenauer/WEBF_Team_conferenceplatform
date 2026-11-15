@@ -1,8 +1,27 @@
-import conferenceData from '../data/conference-data.json'
+//import conferenceData from '../../public/data/conference-data.json'
 import type { ConferenceData, Session, Speaker } from '../types/Conference'
 
 
-const data = conferenceData as ConferenceData
+
+
+//const data = conferenceData as ConferenceData
+
+
+// URL für Service worker! ADR 006
+export const DATA_URL = import.meta.env.BASE_URL + 'data/conference-data.json';
+
+let data: ConferenceData
+
+//fetch ADR 006
+export async function loadConferenceData() {
+  const response = await fetch(DATA_URL)
+  if (!response.ok) throw new Error('Daten nicht erreichbar')
+  data = await response.json()
+}
+
+if ('serviceWorker' in navigator && !navigator.serviceWorker.controller) {
+  navigator.serviceWorker.addEventListener('controllerchange', () => fetch(DATA_URL), { once: true })
+}
 
 export function useConferenceData() {
   const sessions = data.sessions
