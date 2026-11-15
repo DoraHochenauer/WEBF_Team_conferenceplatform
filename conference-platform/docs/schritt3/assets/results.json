@@ -1,0 +1,77 @@
+{
+  "chrome": "Chrome/157.0.8103.52",
+  "scenarios": {
+    "i": {
+      "offline": true,
+      "served": {
+        "/": {
+          "status": 200,
+          "fromServiceWorker": true
+        },
+        "/data/conference-data.json": {
+          "status": 200,
+          "fromServiceWorker": true
+        }
+      },
+      "sessionCards": 20,
+      "afterTrackFilter": 4,
+      "cachesOnline": {
+        "workbox-precache-v2-http://localhost:4174/": [
+          "/registerSW.js",
+          "/index.html",
+          "/favicon.ico",
+          "/icons/Pwa-apple-touch-icon-180x180.png",
+          "/icons/Pwa-512x512.png",
+          "/icons/Pwa-192x192.png",
+          "/assets/index-D8WZbH0_.js",
+          "/assets/index-Cg22dHtf.css",
+          "/manifest.webmanifest"
+        ],
+        "conference-data": [
+          "/data/conference-data.json"
+        ]
+      }
+    },
+    "ii": {
+      "offline": true,
+      "navServed": {
+        "status": 200,
+        "fromServiceWorker": true
+      },
+      "storage": {
+        "myProgram": "[\"s01\",\"s05\"]"
+      },
+      "savedTitles": [
+        "Die Zukunft der Web-Frontends: Trends 2026+",
+        "Clean Code im Zeitalter von AI-Assistenten"
+      ],
+      "storageAfterRemove": {
+        "myProgram": "[\"s05\"]"
+      }
+    },
+    "iii": {
+      "offline": true,
+      "error": "net::ERR_INTERNET_DISCONNECTED at http://localhost:4174/",
+      "url": "chrome-error://chromewebdata/",
+      "swRegistered": false
+    }
+  },
+  "sw": {
+    "scope": "http://localhost:4174/",
+    "state": "activated",
+    "controlled": true
+  },
+  "manifest": {
+    "href": "/manifest.webmanifest",
+    "name": "ConFlare – Konferenzplattform",
+    "short_name": "ConFlare",
+    "display": "standalone",
+    "start_url": "/",
+    "theme_color": "#253c6d",
+    "background_color": "#f7f8fb",
+    "icons": [
+      "192x192",
+      "512x512"
+    ]
+  }
+}
