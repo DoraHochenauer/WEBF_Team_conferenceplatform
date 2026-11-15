@@ -70,7 +70,7 @@ Hier geht es um die Daten aus der conference.json Datei. Diese Datei wird derzei
 
 
 ### Entscheidung
-**Option B:**  Grundsätzlich würde Cache First ausreichen, da die Daten meist statisch sind. In der Realität kann es aber zu Raumänderungen kommen und dieses Scenarion sellte hier ebenfalls berücksichtigt werden. Daher die Entscheidung für Stale-White-Revalidate. Dieses bietet eine Offline Fähigkeit und kann Änderungen liefern. 
+**Option B:**  Grundsätzlich würde Cache First ausreichen, da die Daten meist statisch sind. In der Realität kann es aber zu Raumänderungen kommen und dieses Scenarion sellte hier ebenfalls berücksichtigt werden. Daher die Entscheidung für Stale-White-Revalidate. Dieses bietet eine Offline Fähigkeit und kann Änderungen liefern. Damit die Daten eine eigene Caching-Regel bekommen, verschieben wir sie nach public/data/conference-data.json und laden sie per fetch()
 
 ### Konsequenzen
 

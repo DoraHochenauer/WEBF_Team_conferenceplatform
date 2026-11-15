@@ -46,6 +46,50 @@
 
  - **Datum:** 14.11.2026
 - **Tool:** Claude (Anthropic)
+- **Prompt:** Verstehe ich das Richtig ein Teil von der Punkt D ist dann ganz am schluss zum testen zu machen oder?
+- **Zweck:** Nochmal abklären ob die Aufgabenstellung verstandenden wurde 
+- **Ergebnis:** Erklärung: D besteht aus zwei Teilen: ADR soll am Anfang geschrieben werden die Testszenarien und die Tests kommen dann erst mit den anderen Punkten gemeinsam
+ 
+ ---
+
+  - **Datum:** 14.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** Was ist inhaltlich genau der unterschied zwischen B und D?
+- **Zweck:** Abklärung, wie sich die Dokumente inhaltlich unterscheiden sollen, da das Theema von den beiden sehr ähnlich ist. 
+- **Ergebnis:** Erklärung: B sagt, warum die Strategien zum Projekt passen, D sagt, warum wir uns dafür entschieden haben und was wir verworfen haben. 
+ 
+ ---
+
+  - **Datum:** 14.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** Kannst du mir generell mal so paar Situations-Beispiele geben, die man bei Punkt B gut einfließen lassen kann?
+- **Zweck:** Besseres Verständnis für den Inhalt von B bekommen und Ideensammlung 
+- **Ergebnis:** verschiedene Beispiele. Teile von diesen in B übernommen. 
+ 
+ ---
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** 
+- **Zweck:**
+- **Ergebnis:** 
+ 
+ ---
+
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** 
+- **Zweck:**
+- **Ergebnis:** 
+ 
+ ---
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
 - **Prompt:** 
 - **Zweck:**
 - **Ergebnis:** 
