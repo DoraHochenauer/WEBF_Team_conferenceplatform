@@ -71,9 +71,9 @@
 
   - **Datum:** 15.11.2026
 - **Tool:** Claude (Anthropic)
-- **Prompt:** 
-- **Zweck:**
-- **Ergebnis:** 
+- **Prompt:** Kannst du mir ein Beispielhaftes Manifest geben? Zeigt und erkläre wie dies ca aufgeaut sein soll.
+- **Zweck:** Eine Idee bekommen, wie man das Manifest baut.
+- **Ergebnis:** Eine Vorlage generiert. Diese wurde großteils übernommen, aber an unseren Fall angepasst. 
  
  ---
 
@@ -81,17 +81,74 @@
 
   - **Datum:** 15.11.2026
 - **Tool:** Claude (Anthropic)
-- **Prompt:** 
-- **Zweck:**
-- **Ergebnis:** 
+- **Prompt:** Gehen wir zu den Aufgaben von Person 1. Kannst du mir grundlegend mal sagen, was hier alles zu tun ist?
+- **Zweck:** Überblick über die Aufgaben und Verständis, was zu tun ist
+- **Ergebnis:** Ein Überblick in einzelnen Schritt, die man gut für die Planung der Aufgabe verwenden konnte. 
  
  ---
 
 
   - **Datum:** 15.11.2026
 - **Tool:** Claude (Anthropic)
-- **Prompt:** 
-- **Zweck:**
-- **Ergebnis:** 
+- **Prompt:** Kannst du mir die Schritte als Markdown geben?
+- **Zweck:** Ein file, was man nebenbei führen kann und wo man bei Fragen auf die einzelnen Schritte referenzieren kann. 
+- **Ergebnis:** Schritte in einem Markdown file zusammengefasst. 
  
  ---
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** (Bei den vorherigen genannten Schritten war die Rede von einem Plugin) Kannst du mir den Befehl für das Plugin geben?
+- **Zweck:** Installation für das Plugin vereinfachen
+- **Ergebnis:** Befehl wurde übernommen und das Plugin wurde installiert
+ 
+ ---
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** Habe beim installieren des Plugin diese Fehlermeldung bekommen (+Screenshot) - Was bedeteutet das?
+- **Zweck:** Herausfinden, was falsch gemacht wurde
+- **Ergebnis:** Es handelte sich nicht um eine Fehlermeldung, sondern nur um einen Hinweis, der hier allersings nicht beachtet werden musst. 
+ 
+ ---
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** Brauche ich bei den Logos auch SVGs oder reichen PNGs? (bei den davor genannten Schritten war die Rede von SVGs und PNGs)
+- **Zweck:** Herausfinden, ob beides notwendig ist - ich hatte zu dem Zeitpunkt nur PNGs exportiert 
+- **Ergebnis:** PNGs reichen aus
+ 
+ ---
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** Kannst du mir ein beispielhaftes Manifest geben? Welche Punkte sind hier wichtig zu beachten?
+- **Zweck:** Idee bekommen, wie das ganze zu schreiben ist und wie man das ganze angeht.
+- **Ergebnis:** Beispiel generiert. Anhand von diesem Beispiel wurde das Manifest gebaut. 
+ 
+ ---
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** Schau mal generell in den Projekt Ordner? Was fehlt noch alles von der Aufgabenstellung und welche Punkte haben wir schon erledigt?
+- **Zweck:** Überblick schaffen, ob alles umgesetzt wurde. 
+- **Ergebnis:** Hinweise, was noch fehlt bzw. wo es noch Verbesserungsbedarf gibt - Feedback wurde großteils angewandt. 
+ 
+ ---
+
+
+  - **Datum:** 15.11.2026
+- **Tool:** Claude (Anthropic)
+- **Prompt:** Ich arbeite in Firefox vorrangig. Wie teste ich die Szenarien her am besten?
+- **Zweck:** Herausfinden auf was man beim Testen achten muss und wie das im gewählten Browser am besten umgesetzt werden kann
+- **Ergebnis:** Anleitung, wie man in Firefox am besten vorgeht - umgesetzt
+ 
+ ---
+
+  
+
+  
