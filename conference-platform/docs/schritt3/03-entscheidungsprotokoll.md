@@ -2,7 +2,7 @@
  
 ## Status
  
-Proposed
+Accepted
  
 ## Datum
  
@@ -44,7 +44,7 @@ Zum Grundgerüst der App gehlört HTML, JS und CSS, Design Token, Icons und auch
 
 ### Konsequenzen
 
-**Poitiv:** Die App startet nach dem ersten Online Laden vollständig ohne Probleme offline. 
+**Positiv:** Die App startet nach dem ersten Online Laden vollständig ohne Probleme offline. 
 **Negativ:** Eine neue Verison der App kann die NutzerInnnen erst beim nächsten Neuladen erreichen. Das ist hier in Ordnung, das sich während des Nutzens der App nichts diese Daten nicht ändern bzw. während einer Konferenz sich nicht ändern. 
 
 
