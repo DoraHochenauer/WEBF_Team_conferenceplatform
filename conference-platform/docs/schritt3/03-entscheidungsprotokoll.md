@@ -113,28 +113,30 @@ Die gemerkten Sessions werden grundlegend schon clientseitig im localStroage ges
 
 
 ## Testszenarien 
-Build + `npm run dev`, offline über DevTools → Network → „Offline", Inkognito-Fenster.
-Person 2: [ Firefox ]
+Person 1: `npm run build` --> `npm run preview`--> In Firefox die Adresse öffnen 
+Person 2: Build + `npm run dev`, offline über DevTools → Network → „Offline", Inkognito-Fenster.
+
+
 
 ### i. Übersicht offline
 - **Vorher:** App einmal online geöffnet
 - **Aktion:** Offline → `/` neu laden
-- **Ergebnis P1:** ✅ alle 20 Sessions, Filter funktionieren
-- **Ergebnis P2:** [ … ]
+- **Ergebnis P1:** Der Firefox-Browser wurde auf offline gestellt. Alle Funktionen der App konnten verwendet werden. auch ein Neuladen funktionierte. 
+- **Ergebnis P2:** ✅ alle 20 Sessions, Filter funktionieren
 - **Lücke:** Daten = Stand vom letzten Online-Laden, kein Offline-Hinweis
 
 ### ii. Mein Programm offline
 - **Vorher:** Sessions online gemerkt
 - **Aktion:** Offline → `/mein-programm` neu laden
-- **Ergebnis P1:** ✅ gemerkte Sessions sichtbar, Entfernen funktioniert
-- **Ergebnis P2:** [ … ]
+- **Ergebnis P1:** Die gemerketen Sessions sind sichtbar. Entfernen funktioniert auch. 
+- **Ergebnis P2:** ✅ gemerkte Sessions sichtbar, Entfernen funktioniert
 - **Lücke:** Browserdaten gelöscht = Sessions weg
 
 ### iii. Erstbesuch offline
 - **Vorher:** App nie geöffnet
 - **Aktion:** Offline → App aufrufen
-- **Ergebnis P1:** ⚠️ [Fehlerseite des Browsers]
-- **Ergebnis P2:** [ … ]
+- **Ergebnis P1:** Die Adresse wurde in einem Inkognito-Fenster des Browsers geöffnet. Dort kam die Fehlerseite des Browsers. 
+- **Ergebnis P2:** ⚠️ [Fehlerseite des Browsers]
 - **Warum okay:** Service Worker muss einmal online installiert werden, Teilnehmende öffnen die App meist vorab
 
 
