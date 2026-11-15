@@ -44,6 +44,13 @@ Prompts im Wortlaut, eingefügte ADR-Abschnitte bzw. Angabe-Texte sind in [eckig
 - Prompt: „nicht die ADRs anpassen“
 - Zweck: Umsetzung freigeben, aber Änderungen an den ADRs selbst vornehmen.
 
+## Cross-Review
+
+**2026-11-01 · Claude Code**
+- Prompt: „wieso werden in der detailansicht der session der speaker nicht angezeigt“
+- Zweck: Fehler in der Session-Detailseite (Teil C, Person 2) beim Cross-Review finden.
+- Ergebnis: Die computed-Variable hieß `sessions`, im Template wurde `speakers` verwendet. Hinweis an Person 2 weitergegeben.
+
 
 ## Weitere Prompts 
 
