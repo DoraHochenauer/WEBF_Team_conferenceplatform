@@ -11,9 +11,29 @@ export default defineConfig({
     vueDevTools(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: 'auto',
+
 
       manifest: {
-        // TO DO
+        name: 'ConFlare – Konferenzplattform',
+        short_name: 'ConFlare',
+        description: 'Programm, Speaker und Mein Programm der Konferenz – auch offline',
+        lang: 'de',
+
+        // Tokens: --color-brand-primary (= --color-blue-800), färbt Statusleiste und Titelzeile
+        theme_color: '#253c6d',
+        // Tokens: --color-background (= --color-gray-50), Hintergrund des Startbildschirms
+        background_color: '#f7f8fb',
+
+        display: 'standalone',
+        start_url: '/',
+        scope: '/',
+
+        icons: [
+          { src: '/icons/Pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+          { src: '/icons/Pwa-512x512.png', sizes: '512x512', type: 'image/png' }
+        ],
+
       },
 
       
